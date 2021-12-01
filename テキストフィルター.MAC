@@ -2,12 +2,12 @@
 if (selecting == 1){
 
 	// 範囲選択中のテキストを取得する
-	$str = gettext(seltopx,seltopy,selendx,selendy);
+	$str = gettext(seltopx, seltopy, selendx, selendy);
 
 	// 選択されたテキストを含まれてない行を空行にする
 	replaceall "^((?!" + $str + ").)*$" , "" , regular, nocasesense, nohilight;
 
 	// 空行を削除する
 	replaceall "^\n" , "" , regular, nocasesense, nohilight;
-  
+
 }
